@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -12,11 +13,11 @@ spec:
         app: flask-app
     spec:
       containers:
-      - name: flask-app-container
-        image: dogadm/gitops-argo-app:v1
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
-        ports:
-        - containerPort: 5000
+        - name: flask-app-container
+          image: dogadm/gitops-argo-app:v1
+          resources:
+            limits:
+              memory: 128Mi
+              cpu: 500m
+          ports:
+            - containerPort: 5000
