@@ -45,17 +45,17 @@ pipeline{
                 }
             }
         }
-        stage('Push Docker Image'){
+        // stage('Push Docker Image'){
 
-            steps{
-                script{
+        //     steps{
+        //         script{
 
-                    docker.withRegistry('',REGISTRY_CREDS){
-                        docker_image.push("$BUILD_NUMBER")
-                        docker_image.push('latest')
-                    }
-                }
-            }
-        }
+        //             docker.withRegistry('',REGISTRY_CREDS){
+        //                 docker_image.push("$BUILD_NUMBER")
+        //                 docker_image.push('latest')
+        //             }
+        //         }
+        //     }
+        // }
     }
 }
